@@ -1,13 +1,11 @@
 package Seminar_1.impl;
 
-public class HotDrinkVendingMachine extends VendingMachine {
+import Seminar_1.Product;
+import Seminar_1.VendingMachine;
 
-    public HotDrinkVendingMachine() {
-        super();
+public class HotDrinkVendingMachine extends VendingMachine{
 
+    public Product getProduct(String name, double price,double volume, int temperature){
+        return new HotDrink(name, price,volume, temperature);
     }
-    public HotDrinkVendingMachine (List<Product> products) {
-        super (products);
-    }
-
 }

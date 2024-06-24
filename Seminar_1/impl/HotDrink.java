@@ -5,33 +5,34 @@ import java.time.LocalDate;
 import Seminar_1.Product;
 
 public class HotDrink extends Product {
-    private double temperature;
+    private int temperature;
+    private double volume;
 
-
-    public HotDrink(String name, double price, LocalDate releasDate){
-        super(name, price, releasDate);
-        this.isSpark = false;
-        this.volume = 1;
-        this.pack = EPackage.PLASTIC.getMaterial();
-    }
-
-    public HotDrink(String name, double price, LocalDate releasDate, boolean spark, String pack, float volume){
-        super(name, price, releasDate);
-        this.isSpark = false;
+    public HotDrink(String name, double price, double volume, int temperature){
+        super(name, price);
+        this.temperature = temperature;
         this.volume = volume;
-        this.pack = pack;
+}
+
+    public int getTemperature() {
+        return temperature;
     }
 
-    public float getVolume() {
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
+    }
+
+    public double getVolume() {
         return volume;
     }
 
-    public String getPack() {
-        return pack;
+    public void setVolume(double volume) {
+        this.volume = volume;
     }
 
-    public boolean isSpark() {
-        return isSpark;
+    @Override
+    public String toString() {
+        return String.format("%s  %.1f  %d", name, value, temperature);
     }
 
 }
