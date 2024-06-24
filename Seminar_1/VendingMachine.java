@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public class VendingMachine {
-    private List<Product> products;
+    protected List<Product> products;
     
 
     public VendingMachine(){
@@ -30,19 +30,7 @@ public class VendingMachine {
         System.out.println("No such product" + name);
         return null;
     }
-
-    // реализовать перегруженный метод getProduct выдающий продукт соответствующий имени, объему, температуре.
-
-    // public Product getProduct(String name, int volume, double temperatur){
-    //     for (Product product : products) {
-    //         if (product.getName().equals(name)) {
-    //             products.remove(product);
-    //             return product;
-    //         }
-    //     }
-    //     System.out.println("No such product" + name);
-    //     return null;
-    // }
+    
 
     public List<Product> getProducts() {
         return products;
